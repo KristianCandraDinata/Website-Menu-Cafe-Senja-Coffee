@@ -1,0 +1,438 @@
+/* === FONT & RESET (Materi Pertemuan 4) === */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF; /* Latar utama putih */
+    margin: 0;
+    padding: 0;
+}
+
+/* === HEADER & NAVIGASI (Materi Pertemuan 7) === */
+#menu-navigasi {
+    margin: 0;
+    padding: 0 40px; /* Memberi jarak kiri-kanan agar tidak mentok layar */
+    background-color: #2D231E; /* Cokelat Gelap */
+}
+
+/* Teks Logo didorong ke KIRI */
+.teks-logo {
+    float: left; 
+    color: #D4AF37; /* Emas */
+    margin: 0;
+    font-size: 22pt;
+    font-family: 'Times New Roman', Times, serif; /* Font klasik elegan */
+    line-height: 70px;
+    letter-spacing: 2px;
+}
+
+/* Menu ul didorong ke KANAN */
+#menu-navigasi ul {
+    margin: 0;
+    padding: 0;
+    line-height: 70px; /* Tinggi baris disamakan dengan teks logo */
+    float: right; 
+}
+
+#menu-navigasi li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+#menu-navigasi ul li a {
+    text-align: center;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 0 20px; /* Jarak antar teks menu lebih natural */
+    display: block;
+    color: white;
+    font-weight: bold;
+}
+
+/* Sub-Menu Dropdown */
+#menu-navigasi ul ul {
+    position: absolute;
+    visibility: hidden;
+    top: 70px; /* Harus sama dengan line-height header */
+    background-color: #2D231E;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+#menu-navigasi ul ul li {
+    float: none;
+}
+
+#menu-navigasi ul ul li a {
+    text-align: left;
+    padding-left: 20px;
+    width: 180px;
+}
+
+#menu-navigasi ul li:hover ul {
+    visibility: visible;
+}
+
+#menu-navigasi li a:hover {
+    color: #D4AF37; /* Teks berubah emas saat disentuh */
+}
+
+.bersihkan-float {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/* === HERO SECTION (Materi Pertemuan 5: Latar Belakang Warna) === */
+#hero-wrapper {
+    /* Lapis luar: Area untuk menaruh gambar pemandangan kafe */
+    background-image: url('Gambar/BackgroundBeranda.jpg'); /* Ganti dengan nama foto kafemu */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Agar gambar menyesuaikan lebar layar */
+    padding: 100px 20px; /* Ruang kosong atas-bawah agar gambar latarnya terlihat */
+}
+
+#hero-kotak-teks {
+    /* Lapis dalam: Kotak krem tempat teks berada */
+    background-color: rgba(235, 230, 223, 0.80); 
+    /* Kamu juga bisa pakai rgba(235, 230, 223, 0.92) kalau mau kotaknya agak tembus pandang */
+    width: 60%; /* Lebar kotak teks tidak penuh, menyisakan ruang untuk gambar di kiri-kanannya */
+    margin: 0 auto; /* Kunci untuk menengahkan kotak (Pertemuan 4) */
+    padding: 40px 30px;
+    border-radius: 12px; /* Sudut melengkung (Pertemuan 7) */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Bayangan agar kotak terlihat timbul */
+}
+
+#hero-kotak-teks h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36pt;
+    color: #2D231E;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+#hero-kotak-teks p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    font-size: 13pt;
+    color: #5D4037;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.tombol-cta {
+    display: inline-block;
+    background-color: #D4AF37; /* Warna Emas */
+    color: #2D231E; /* Teks Cokelat Gelap */
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 30px; /* Sudut sangat melengkung berbentuk kapsul */
+    margin-top: 25px; /* Jarak dari teks di atasnya */
+    transition: 0.3s;
+    border: 2px solid #D4AF37;
+}
+
+.tombol-cta:hover {
+    background-color: transparent; /* Latar menjadi transparan */
+    color: #2D231E; 
+    border: 2px solid #2D231E; /* Garis tepi berubah jadi cokelat gelap */
+}
+
+/* === KONTEN UTAMA & KARTU MENU === */
+#konten-utama {
+    margin: 50px auto 80px auto; 
+    width: 90%;
+    background-color: #FFFFFF;
+}
+
+.sub-judul {
+    font-family: 'Times New Roman', Times, serif;
+    color: #2D231E;
+    font-size: 28pt;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.wadah-menu {
+    text-align: center;
+}
+
+/* Desain Kartu Menu Persis Gambar */
+.kartu-menu {
+    display: inline-block; 
+    width: 330px; /* Kotak sedikit lebih lebar agar harga tidak turun ke bawah */
+    margin: 0 15px 30px 15px;
+    background-color: #FFFFFF;
+    border-radius: 12px; /* Border radius materi pertemuan 7 */
+    border: 1px solid #EBE6DF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); /* Bayangan sedikit lebih tegas */
+    vertical-align: top;
+    text-align: left; /* Teks di dalam kartu wajib rata kiri */
+    
+    /* KUNCI ESTETIKA: overflow hidden memotong gambar agar sudutnya ikut melengkung */
+    overflow: hidden; 
+    transition: 0.3s;
+}
+
+.kartu-menu:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid #D4AF37; /* Tepi menjadi emas saat disentuh kursor */
+}
+
+.gambar-menu {
+    width: 100%; /* Memaksa gambar mengisi penuh lebar kotak tanpa celah putih */
+    height: 220px; /* Tinggi gambar diseragamkan */
+    object-fit: cover; /* Mencegah gambar menjadi gepeng (distorsi) */
+    display: block;
+    border-bottom: 1px solid #EBE6DF;
+}
+
+.info-menu {
+    padding: 25px 25px; /* KUNCI ESTETIKA: Memberikan ruang napas yang lega untuk teks */
+}
+
+#info-praktis {
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    color: #2D231E;
+}
+
+#info-praktis h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+#info-praktis p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #5D4037;
+    margin-top: 0;
+}
+
+/* Memecah Nama dan Harga ke Kiri dan Kanan */
+.grup-nama {
+    float: left;
+    text-align: left;
+}
+
+.nama-menu {
+    display: block; /* Memaksa teks ini mengambil 1 baris penuh agar opsi suhu turun ke bawah */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15pt;
+    font-weight: bold;
+    color: #2D231E;
+}
+
+/* Desain estetik untuk teks Hot/Ice */
+.opsi-suhu {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #8D6E63; /* Warna cokelat pudar agar tidak menyaingi nama menu */
+    font-style: italic;
+    margin-top: 4px; /* Memberi sedikit jarak dari nama menu di atasnya */
+}
+
+.harga-menu {
+    float: right;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #D4AF37; /* Warna emas */
+}
+
+/* Garis Putus-putus */
+.garis-putus {
+    clear: both; /* KUNCI: Mencegah garis menabrak teks nama dan harga di atasnya */
+    border: 0;
+    border-top: 2px dotted #D7CCC8; /* Dotted memberi efek titik-titik yang lebih rapi */
+    margin: 15px 0;
+}
+
+.deskripsi-menu {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif; /* Font modern yang membulat dan rapi */
+    font-size: 10.5pt; /* Ukuran sedikit dikecilkan agar terlihat presisi */
+    color: #5D4037;
+    line-height: 1.6;
+    margin: 0;
+    height: 75px; 
+}
+
+/* === FOOTER === */
+#kaki-web {
+    background-color: #2D231E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 10pt;
+}
+
+/* =========================================
+   === GAYA KHUSUS TABEL MENU (menu.html) ===
+   ========================================= */
+
+.tabel-menu {
+    border-collapse: collapse; /* Menghilangkan spasi ganda antar kotak tabel */
+    margin: 0 auto; /* Menengahkan tabel */
+    width: 90%;
+}
+
+/* Garis pemisah estetik di bawah setiap baris menu */
+.tabel-menu td {
+    border-bottom: 1px solid #EBE6DF;
+    transition: background-color 0.3s;
+}
+
+/* Menghilangkan garis bawah pada baris terakhir tabel */
+.tabel-menu tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efek Hover: Baris menyala saat dilewati kursor */
+.baris-item:hover td {
+    background-color: #F8F5F2; 
+    cursor: pointer; /* Kursor berubah jadi tangan (penting untuk pop-up nanti) */
+}
+
+/* Mempercantik gambar thumbnail di dalam tabel */
+.thumbnail-menu {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran agar beda dari beranda */
+    object-fit: cover;
+    border: 3px solid #EBE6DF;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.baris-item:hover .thumbnail-menu {
+    border-color: #D4AF37; /* Lingkaran foto jadi emas saat di-hover */
+}
+
+/* Menyesuaikan kembali gaya teks khusus untuk di dalam tabel */
+.tabel-menu .deskripsi-menu {
+    height: auto; /* Membatalkan paksaan tinggi dari beranda */
+    margin-top: 10px;
+}
+
+.tabel-menu .harga-menu {
+    float: none; /* Mematikan gaya float karena di tabel posisinya sudah dikunci kolom */
+    display: inline-block;
+    font-size: 16pt;
+}
+
+.tabel-menu .nama-menu {
+    font-size: 18pt; /* Judul sedikit dibesarkan */
+}
+
+/* === GAYA KOTAK PEMISAH KATEGORI === */
+.kategori-box {
+    background-color: #FAF8F5; /* Warna krem sangat pucat sebagai pemisah visual */
+    border-radius: 20px; /* Sudut membulat yang memberi kesan ramah/friendly */
+    padding: 40px 30px; /* Ruang napas agar isi tabel tidak menabrak garis tepi */
+    margin-bottom: 60px; /* Jarak antar kotak kategori */
+    border: 2px solid #F1EFEA;
+}
+
+/* Modifikasi garis bawah judul khusus di dalam kotak kategori */
+.kategori-box .sub-judul {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #D4AF37; /* Garis putus-putus emas elegan */
+}
+
+/* Penyesuaian efek Hover pada baris menu agar kontras dengan warna kotak */
+.baris-item:hover td {
+    background-color: #FFFFFF; /* Saat disentuh, baris menjadi putih terang */
+    cursor: pointer; 
+}
+
+/* === GAYA HALAMAN FORM (pesan.html) === */
+input[type="text"], input[type="password"], select, textarea {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    border: 1px solid #D7CCC8;
+    border-radius: 5px;
+    width: 90%;
+    background-color: #F8F5F2;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #D4AF37; /* Garis menjadi emas saat kolom sedang diketik */
+    background-color: #FFFFFF;
+}
+
+/* === GAYA HALAMAN CABANG / OUTLET (cabang.html) === */
+/* === GAYA HALAMAN OUTLET (outlet.html) === */
+.kartu-outlet {
+    display: inline-block;
+    width: 360px;
+    margin: 0 25px 30px 25px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+    vertical-align: top;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.kartu-outlet:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.gambar-outlet {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid #F1EFEA;
+}
+
+.info-outlet {
+    padding: 30px 25px;
+}
+
+.nama-outlet {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22pt;
+    color: #2D231E;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.alamat-outlet {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #5D4037;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+.link-readmore {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 9.5pt;
+    font-weight: bold;
+    color: #2D231E;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.link-readmore:hover {
+    color: #D4AF37;
+}

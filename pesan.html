@@ -1,0 +1,266 @@
+<html>
+<head>
+    <title>Reservasi Meja | Senja Coffee</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- Memanggil file jQuery (Pastikan file jquery.js sudah ada di foldermu) -->
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+
+    <!-- NAVIGASI & LOGO -->
+    <div id="menu-navigasi">
+        <h2 class="teks-logo">SENJA COFFEE</h2>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="menu.html">Kategori Menu ▾</a>
+                <ul>
+                    <li><a href="menu.html#kopi">Signature Coffee</a></li>
+                    <li><a href="menu.html#classic">Classic Espresso</a></li>
+                    <li><a href="menu.html#nonkopi">Minuman Segar</a></li>
+                    <li><a href="menu.html#makanan">Pastry & Makanan</a></li>
+                </ul>
+            </li>
+            <li><a href="pesan.html">Reservasi Meja</a></li>
+            <li><a href="outlet.html">Outlet</a>
+            </li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+        <br class="bersihkan-float">
+    </div>
+
+    <!-- HEADER HALAMAN RESERVASI -->
+    <div id="hero-wrapper">
+        <div id="hero-kotak-teks">
+            <h1 align="center">Reservasi Meja</h1>
+            <p align="center">Pastikan tempatmu tersedia sebelum datang. Silakan isi formulir pemesanan di bawah ini.</p>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA: FORMULIR -->
+    <div id="konten-utama">
+        <div class="kategori-box">
+            <h2 align="center" class="sub-judul">Formulir Pemesanan</h2>
+
+            <!-- Implementasi jQuery Toggle untuk Syarat & Ketentuan -->
+            <div align="center">
+                <button id="tombol-syarat" class="tombol-cta" style="margin-top: 0; margin-bottom: 20px;">Baca Syarat Reservasi</button>
+            </div>
+            <div id="kotak-syarat" style="display: none; background: #EBE6DF; padding: 15px; border-radius: 10px; margin-bottom: 30px;">
+                <p style="margin: 0; font-size: 11pt; color: #5D4037;">
+                    <b>Ketentuan:</b><br>
+                    1. Keterlambatan maksimal 15 menit dari jadwal.<br>
+                    2. DP (Uang Muka) wajib dibayarkan untuk reservasi di atas 5 orang.<br>
+                    3. Konfirmasi akan dikirimkan melalui WhatsApp/Email.
+                </p>
+            </div>
+
+            <!-- Form Pemesanan dengan Validasi JavaScript -->
+            <!-- Form Pemesanan dengan Validasi JavaScript -->
+            <form action="#" method="POST" onSubmit="return validasiForm()">
+                <table width="80%" align="center" cellpadding="10" cellspacing="0">
+                    
+                    <!-- 1. IDENTITAS DIRI -->
+                    <tr>
+                        <td width="30%"><b>Nama Lengkap</b></td>
+                        <td width="70%"><input type="text" id="nama" name="nama" size="30" placeholder="Masukkan nama Anda"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Kata Sandi (Member)</b></td>
+                        <td><input type="password" id="password" name="password" size="30" placeholder="Opsional jika member"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Nomor Telepon Aktif</b></td>
+                        <td><input type="text" id="notelp" name="notelp" size="15" placeholder="Masukkan nomor telepon/WA"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Email (Opsional)</b></td>
+                        <td><input type="text" id="email" name="email" size="30" placeholder="Masukkan email Anda"></td>
+                    </tr>
+
+                    <!-- 2. DETAIL KEDATANGAN -->
+                    <tr>
+                        <td><b>Tanggal Kedatangan</b></td>
+                        <td><input type="text" id="tanggal" name="tanggal" size="20" placeholder="Contoh: 15 Oktober 2026"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Jam Kedatangan</b></td>
+                        <td>
+                            <!-- Kita gunakan Drop Down agar pengunjung memilih waktu operasional kafe -->
+                            <select id="waktu" name="waktu">
+                                <option value="">-- Pilih Waktu --</option>
+                                <option value="pagi">Pagi (08.00 - 11.00)</option>
+                                <option value="siang">Siang (12.00 - 15.00)</option>
+                                <option value="sore">Sore (15.00 - 18.00)</option>
+                                <option value="malam">Malam (19.00 - 22.00)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Jumlah Tamu (Pax)</b></td>
+                        <td>
+                            <select id="jumlah_tamu" name="jumlah_tamu">
+                                <option value="1-2">1 - 2 Orang</option>
+                                <option value="3-4">3 - 4 Orang</option>
+                                <option value="5-8">5 - 8 Orang</option>
+                                <option value="9+">Lebih dari 8 Orang (Grup)</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- 3. PREFERENSI LOKASI -->
+                    <tr>
+                        <td><b>Pilih Cabang</b></td>
+                        <td>
+                            <select id="cabang" name="cabang">
+                                <option value="">-- Pilih Lokasi Kafe --</option>
+                                <option value="pontianak">Pontianak Kota</option>
+                                <option value="kuburaya">Kubu Raya</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><b>Area Meja</b></td>
+                        <td>
+                            <input type="radio" name="area" value="indoor"> Indoor (Ber-AC)<br>
+                            <input type="radio" name="area" value="outdoor"> Outdoor (Smoking Area)<br>
+                            <input type="radio" name="area" value="rooftop"> Rooftop (Senja View)
+                        </td>
+                    </tr>
+
+                    <!-- 4. KEBUTUHAN KHUSUS -->
+                    <tr>
+                        <td><b>Tujuan Acara (Opsional)</b></td>
+                        <td>
+                            <select id="acara" name="acara">
+                                <option value="">-- Pilih Tujuan Acara--</option>
+                                <option value="santai">Nongkrong Santai / Nugas</option>
+                                <option value="ulang_tahun">Perayaan Ulang Tahun</option>
+                                <option value="anniversary">Anniversary / Dinner Romantis</option>
+                                <option value="meeting">Pertemuan Bisnis / Meeting</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><b>Alergi & Pantangan</b></td>
+                        <td>
+                            <input type="checkbox" name="alergi" value="kacang"> Alergi Kacang (Nut Allergy)<br>
+                            <input type="checkbox" name="alergi" value="susu"> Alergi Susu Sapi (Lactose Intolerant)<br>
+                            <input type="checkbox" name="alergi" value="vegetarian"> Menu Khusus Vegetarian / Vegan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><b>Fasilitas Tambahan</b></td>
+                        <td>
+                            <input type="checkbox" name="fasilitas" value="colokan"> Stop Kontak / Colokan Dekat Meja<br>
+                            <input type="checkbox" name="fasilitas" value="hichair"> Kursi Anak (Baby Chair)<br>
+                            <input type="checkbox" name="fasilitas" value="akses_roda"> Akses Kursi Roda (Ramah Disabilitas)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top"><b>Catatan Tambahan</b></td>
+                        <td>
+                            <textarea id="catatan" name="catatan" rows="4" cols="40" wrap="physical" placeholder="Misal: Saya ingin meja di dekat jendela, tolong siapkan lilin kecil untuk kejutan ulang tahun..."></textarea>
+                        </td>
+                    </tr>
+
+                    <!-- 5. TOMBOL SUBMIT -->
+                    <tr>
+                        <td></td>
+                        <td style="padding-top: 20px;">
+                            <input type="submit" value="Kirim Reservasi" class="tombol-cta" style="margin-top: 0;">
+                            <input type="reset" value="Kosongkan Form" class="tombol-cta" style="background: transparent; border: 2px solid #D4AF37; margin-top: 0;">
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         POP-UP BUKTI RESERVASI (CSS LAYER)
+         ========================================== -->
+    <div id="popup-reservasi" style="display: none; position: fixed; top: 15%; left: 50%; margin-left: -200px; width: 400px; background-color: #FFFFFF; border: 2px solid #D4AF37; border-radius: 12px; padding: 25px; box-shadow: 0px 10px 30px rgba(0,0,0,0.5); z-index: 999;">
+        <h2 align="center" style="font-family: 'Times New Roman', Times, serif; color: #2D231E; margin-top: 0;">Bukti Reservasi</h2>
+        <hr style="border: 0; border-top: 1px dashed #D7CCC8;">
+        
+        <p style="font-family: Arial, sans-serif; font-size: 11pt; color: #5D4037; line-height: 1.6;">
+            <b>Nama Pemesan:</b> <span id="hasil-nama"></span><br>
+            <b>No. Telepon:</b> <span id="hasil-notelp"></span><br>
+            <b>Tanggal:</b> <span id="hasil-tanggal"></span><br>
+            <b>Waktu:</b> <span id="hasil-waktu"></span><br>
+            <b>Cabang:</b> <span id="hasil-cabang"></span><br>
+            <b>Catatan:</b> <span id="hasil-catatan"></span>
+        </p>
+        
+        <p align="center" style="font-size: 10pt; color: #8D6E63;">
+            <i>Tunjukkan bukti ini kepada kasir saat Anda tiba di lokasi.</i>
+        </p>
+        
+        <div align="center">
+             <button id="batal-popup" class="tombol-cta" style="margin-top: 10px;">Batalkan</button>
+             <button id="tutup-popup" class="tombol-cta" style="margin-top: 10px;">Tutup & Selesai</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="kaki-web">
+        <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
+    </div>
+
+   <!-- SCRIPT JAVASCRIPT & JQUERY -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1. Script jQuery untuk Toggle Syarat Reservasi
+            $('#tombol-syarat').click(function(event){
+                event.preventDefault(); 
+                $('#kotak-syarat').toggle(300); 
+            });
+
+            // 2. Script jQuery untuk menutup Pop-up Bukti Reservasi
+            $('#tutup-popup').click(function(){
+                $('#popup-reservasi').hide(300); // Menyembunyikan popup
+                document.forms[0].reset(); // Mengosongkan form secara otomatis
+            });
+        });
+
+        // 3. Script JavaScript murni untuk Validasi Form & Menampilkan Pop-up
+        function validasiForm() {
+            // Menangkap nilai input
+            var inputNama = document.getElementById("nama").value;
+            var inputNotelp = document.getElementById("notelp").value;
+            var inputTanggal = document.getElementById("tanggal").value;
+            var inputWaktu = document.getElementById("waktu").value;
+            var inputCabang = document.getElementById("cabang").value;
+            var inputCatatan = document.getElementById("catatan").value;
+            
+            // Mengecek kolom wajib isi
+            if (inputNama == "" || inputNotelp == "" || inputTanggal == "" || inputWaktu == "" || inputCabang == "") {
+                alert("Peringatan: Nama Lengkap, Nomor Telepon, Tanggal, Jam Kedatangan, dan Cabang WAJIB diisi!");
+                return false; 
+            } else {
+                // Memindahkan data dari form ke dalam tag span di Pop-up
+                document.getElementById("hasil-nama").innerHTML = inputNama;
+                document.getElementById("hasil-notelp").innerHTML = inputNotelp;
+                document.getElementById("hasil-tanggal").innerHTML = inputTanggal;
+                document.getElementById("hasil-waktu").innerHTML = inputWaktu;
+                document.getElementById("hasil-cabang").innerHTML = inputCabang;
+                
+                // Menangani catatan jika dibiarkan kosong
+                if(inputCatatan == "") {
+                    document.getElementById("hasil-catatan").innerHTML = "-";
+                } else {
+                    document.getElementById("hasil-catatan").innerHTML = inputCatatan;
+                }
+
+                // Memunculkan Pop-up layer dengan efek jQuery
+                $('#popup-reservasi').show(300);
+
+                // Mengembalikan nilai FALSE agar browser tidak me-refresh/pindah halaman. 
+                // Jika halaman ter-refresh, pop-up akan langsung menghilang sebelum sempat dibaca.
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>

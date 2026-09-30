@@ -1,0 +1,366 @@
+<html>
+<head>
+    <title>Buku Menu | Senja Coffee</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+    <!-- NAVIGASI & LOGO (Sama persis dengan Beranda) -->
+    <div id="menu-navigasi">
+        <h2 class="teks-logo">SENJA COFFEE</h2>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="menu.html">Kategori Menu ▾</a>
+                <ul>
+                    <li><a href="menu.html#kopi">Signature Coffee</a></li>
+                    <li><a href="menu.html#classic">Classic Espresso</a></li>
+                    <li><a href="menu.html#nonkopi">Minuman Segar</a></li>
+                    <li><a href="menu.html#makanan">Pastry & Makanan</a></li>
+                </ul>
+            </li>
+            <li><a href="pesan.html">Reservasi Meja</a></li>
+            <li><a href="outlet.html">Outlet</a>
+            </li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+        <br class="bersihkan-float">
+    </div>
+
+    <!-- BAGIAN HERO (Judul Halaman Menu) -->
+    <div id="hero-wrapper">
+        <div id="hero-kotak-teks">
+            <h1 align="center">Menu</h1>
+            <p align="center">
+                Pilih sajian favoritmu. Mulai dari racikan kopi Nusantara pilihan<br>
+                hingga pastry lezat yang dipanggang segar setiap pagi.
+            </p>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA: DAFTAR MENU -->
+    <div id="konten-utama">
+
+        <!-- Daftar Isi Mini (Internal Links) -->
+        <div align="center" style="margin-bottom: 40px;">
+            <a href="#kopi" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Signature Coffee</a>
+            <a href="#classic" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Classic Espresso</a>
+            <a href="#nonkopi" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Minuman Segar</a>
+            <a href="#makanan" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Pastry & Makanan</a>
+        </div>
+        
+        <!-- ==========================================
+             KATEGORI 1: SIGNATURE COFFEE
+             ========================================== -->
+        <div class="kategori-box">
+            <h2 id="kopi" align="center" class="sub-judul">Signature Coffee</h2>
+            
+            <!-- Tabel Menu (Memenuhi Syarat Materi Tabel HTML) -->
+            <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
+                <!-- Kopi Susu -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/KopiSusuSenja.jpg" class="thumbnail-menu" alt="Kopi Susu Senja">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Kopi Susu Senja</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Paduan sempurna espresso dengan susu segar.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+                <!-- Kopi Susu Gula Aren -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/KopiSusuGulaAren.jpg" class="thumbnail-menu" alt="Kopi Susu Gula Aren">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Kopi Susu Gula Aren</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Paduan sempurna espresso, susu segar, dan gula aren.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+         <!-- ==========================================
+             KATEGORI 1: Classic Espresso
+             ========================================== -->
+        <div class="kategori-box">
+            <h2 id="classic" align="center" class="sub-judul">Classic Espresso</h2>
+            
+            <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
+               <!-- Espresso -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/Espresso.jpg" class="thumbnail-menu" alt="Espresso">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Espresso</span>
+                        <span class="opsi-suhu">Hot Only</span>
+                        <p class="deskripsi-menu">Ekstrak kopi murni yang pekat dan intens, disajikan dalam takaran single atau double shot.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 18.000</span>
+                    </td>
+                </tr>
+
+                <!-- Americano -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/Americano.jpg" class="thumbnail-menu" alt="Americano">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Americano</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Espresso klasik yang dipadukan dengan air murni, menghasilkan rasa kopi yang bersih dan tegas.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+
+                <!-- Cappuccino -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/Cappuccino.jpg" class="thumbnail-menu" alt="Cappuccino">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Cappuccino</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Espresso dengan paduan susu steamed panas dan lapisan busa susu tebal yang lembut di atasnya.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+
+                <!-- Caffè Mocha -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/CaffeMocha.jpg" class="thumbnail-menu" alt="Caffe Mocha">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Caffè Mocha</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Perpaduan seimbang antara ketegasan espresso, susu segar, dan cokelat premium yang manis.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 28.000</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ==========================================
+             KATEGORI 3: MINUMAN SEGAR (NON-KOPI)
+             ========================================== -->
+        <div class="kategori-box">
+            <h2 id="nonkopi" align="center" class="sub-judul">Minuman Segar</h2>
+            
+            <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
+                <!-- 1. Kyoto Matcha Latte -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/MatchaLatte.jpg" class="thumbnail-menu" alt="Kyoto Matcha Latte">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Kyoto Matcha Latte</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Teh hijau premium dari Jepang dipadukan dengan susu oat creamy.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 30.000</span>
+                    </td>
+                </tr>
+
+                <!-- 2. Red Velvet Latte -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/RedVelvetLatte.jpg" class="thumbnail-menu" alt="Red Velvet Latte">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Red Velvet Latte</span>
+                        <span class="opsi-suhu">Hot / Ice</span>
+                        <p class="deskripsi-menu">Minuman manis creamy dengan rasa kue red velvet dan taburan keju.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 28.000</span>
+                    </td>
+                </tr>
+
+                <!-- 3. Korean Strawberry Milk -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/KoreanStrawberryMilk.jpg" class="thumbnail-menu" alt="Korean Strawberry Milk">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Korean Strawberry Milk</span>
+                        <span class="opsi-suhu">Ice Only</span>
+                        <p class="deskripsi-menu">Susu segar dingin dengan selai stroberi buatan sendiri yang manis dan potongan buah asli.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+
+                <!-- 4. Mango Oat Jasmine -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/MangoOatJasmine.jpg" class="thumbnail-menu" alt="Mango Oat Jasmine">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Mango Oat Jasmine</span>
+                        <span class="opsi-suhu">Ice Only</span>
+                        <p class="deskripsi-menu">Kesegaran teh melati premium berpadu dengan susu oat yang creamy dan puree mangga tropis.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 28.000</span>
+                    </td>
+                </tr>
+                
+                <!-- 5. Lychee Spring Tea -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/LycheeSpringTea.jpg" class="thumbnail-menu" alt="Lychee Spring Tea">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Lychee Spring Tea</span>
+                        <span class="opsi-suhu">Ice Only</span>
+                        <p class="deskripsi-menu">Teh hitam seduh dingin dengan sirup leci asli dan buah leci segar utuh yang menyegarkan.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 22.000</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ==========================================
+             KATEGORI 4: PASTRY & MAKANAN
+             ========================================== -->
+        <div class="kategori-box">
+            <h2 id="makanan" align="center" class="sub-judul">Pastry & Makanan</h2>
+            
+            <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
+                
+                <!-- 1. Almond Croissant -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/AlmondCroissant.jpg" class="thumbnail-menu" alt="Almond Croissant">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Almond Croissant</span>
+                        <span class="opsi-suhu">Freshly Baked</span>
+                        <p class="deskripsi-menu">Croissant mentega renyah yang dipanggang segar setiap pagi dengan taburan almond panggang.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 28.000</span>
+                    </td>
+                </tr>
+
+                <!-- 2. Coffee Cinnamon Rolls -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/CoffeeCinnamonRolls.jpg" class="thumbnail-menu" alt="Coffee Cinnamon Rolls">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Coffee Cinnamon Rolls</span>
+                        <span class="opsi-suhu">Freshly Baked</span>
+                        <p class="deskripsi-menu">Gulungan kayu manis bertekstur lembut dengan olesan krim keju dan sentuhan aroma kopi espresso khas Senja.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 25.000</span>
+                    </td>
+                </tr>
+
+                <!-- 3. Sweet & Savory Croffles -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/SweetSavoryCroffles.jpg" class="thumbnail-menu" alt="Sweet & Savory Croffles">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Sweet & Savory Croffles</span>
+                        <span class="opsi-suhu">Freshly Baked</span>
+                        <p class="deskripsi-menu">Paduan unik adonan croissant dan cetakan waffle yang renyah, disajikan dengan pilihan saus manis atau gurih.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 30.000</span>
+                    </td>
+                </tr>
+
+                <!-- 4. Fudgy Brownies -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/FudgyBrownies.jpg" class="thumbnail-menu" alt="Fudgy Brownies">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Fudgy Brownies</span>
+                        <span class="opsi-suhu">Slice</span>
+                        <p class="deskripsi-menu">Potongan kue padat nan legit dengan rasa cokelat hitam pekat yang lumer sempurna di mulut.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 22.000</span>
+                    </td>
+                </tr>
+
+                <!-- 5. Basque Burnt Cheesecake -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/BasqueBurntCheesecake.jpg" class="thumbnail-menu" alt="Basque Burnt Cheesecake">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Basque Burnt Cheesecake</span>
+                        <span class="opsi-suhu">Slice</span>
+                        <p class="deskripsi-menu">Kue keju bergaya Spanyol yang super lembut di dalam dengan lapisan karamel panggang eksotis di bagian luarnya.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 35.000</span>
+                    </td>
+                </tr>
+
+                <!-- 6. French Fries & Sausage -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/FrenchFriesSausage.jpg" class="thumbnail-menu" alt="French Fries & Sausage">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">French Fries & Sausage</span>
+                        <span class="opsi-suhu">Hot Snack</span>
+                        <p class="deskripsi-menu">Kentang goreng renyah bertabur bumbu rahasia yang disajikan hangat bersama sosis sapi panggang premium.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 32.000</span>
+                    </td>
+                </tr>
+
+                <!-- 7. Smoked Beef Mushroom & Cheese Panini -->
+                <tr class="baris-item">
+                    <td width="15%" align="center">
+                        <img src="Gambar/CheesePanini.jpg" class="thumbnail-menu" alt="Smoked Beef Mushroom & Cheese Panini">
+                    </td>
+                    <td width="65%" valign="middle">
+                        <span class="nama-menu">Smoked Beef Mushroom & Cheese Panini</span>
+                        <span class="opsi-suhu">Hot Meal</span>
+                        <p class="deskripsi-menu">Roti lapis Italia panggang berisi irisan daging sapi asap, tumis jamur gurih, dan lelehan keju mozzarella yang melimpah.</p>
+                    </td>
+                    <td width="20%" valign="middle" align="right">
+                        <span class="harga-menu">Rp 40.000</span>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="kaki-web">
+        <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
+    </div>
+
+</body>
+</html>

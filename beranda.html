@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>Beranda | Senja Coffee</title>
+    <!-- Memanggil CSS Eksternal (Materi Pertemuan 4) -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+    <!-- NAVIGASI & LOGO (Pisah Kiri dan Kanan dengan Float) -->
+    <div id="menu-navigasi">
+        <!-- Logo di Kiri -->
+        <h2 class="teks-logo">SENJA COFFEE</h2>
+        
+        <!-- Menu di Kanan -->
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="menu.html">Kategori Menu ▾</a>
+                <ul>
+                    <li><a href="menu.html#kopi">Signature Coffee</a></li>
+                    <li><a href="menu.html#classic">Classic Espresso</a></li>
+                    <li><a href="menu.html#nonkopi">Minuman Segar</a></li>
+                    <li><a href="menu.html#makanan">Pastry & Makanan</a></li>
+                </ul>
+            </li>
+            <li><a href="pesan.html">Reservasi Meja</a></li>
+            <li><a href="outlet.html">Outlet</a>
+            </li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+        <br class="bersihkan-float">
+    </div>
+
+    <!-- BAGIAN HERO (Latar Belakang Krem Penuh) -->
+    <div id="hero-wrapper">
+        <div id="hero-kotak-teks">
+            <h1 align="center">Kopi yang Bercerita</h1>
+            <p align="center">
+                Nikmati seduhan kopi Nusantara dengan suasana hangat di pusat<br>
+                kota Pontianak. Dibuat oleh barista ahli dengan biji kopi pilihan.
+            </p>
+            
+            <!-- Tambahan 1: Tombol Call-to-Action (CTA) -->
+            <div align="center">
+                <a href="menu.html" class="tombol-cta">Lihat Menu Lengkap</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA (Kartu Menu) -->
+    <div id="konten-utama">
+        <h2 align="center" class="sub-judul">Our Signature</h2>
+
+        <div class="wadah-menu" align="center">
+            <!-- KARTU MENU 1 -->
+            <div class="kartu-menu">
+                <img src="Gambar/KopiSusuSenja.jpg" alt="Es Kopi Susu Senja" class="gambar-menu" />
+                <div class="info-menu">
+                    <div class="header-kartu">
+                         <!-- Nama dan opsi suhu dibungkus dalam satu grup -->
+                         <div class="grup-nama">
+                            <span class="nama-menu">Kopi Susu Senja</span>
+                            <span class="opsi-suhu">Hot / Ice</span>
+                        </div>
+                        <span class="harga-menu">Rp 25.000</span>
+                        <br class="bersihkan-float">
+                    </div>
+                    <hr class="garis-putus">
+                    <p class="deskripsi-menu">Paduan sempurna espresso, susu segar, dan gula aren organik khas Pontianak.</p>
+                </div>
+            </div>
+            
+            <!-- KARTU MENU 2 -->
+            <div class="kartu-menu">
+                <img src="Gambar/MatchaLatte.jpg" alt="Kyoto Matcha Latte" class="gambar-menu" />
+                <div class="info-menu">
+                    <div class="header-kartu">
+                        <!-- Dibungkus grup-nama agar harga tidak turun -->
+                        <div class="grup-nama">
+                            <span class="nama-menu">Kyoto Matcha Latte</span>
+                            <span class="opsi-suhu">Hot / Ice</span>
+                        </div>
+                        <span class="harga-menu">Rp 30.000</span>
+                        <br class="bersihkan-float">
+                    </div>
+                    <hr class="garis-putus">
+                    <p class="deskripsi-menu">Teh hijau premium dari Jepang dipadukan dengan susu oat creamy.</p>
+                </div>
+            </div>
+            
+            <!-- KARTU MENU 3 -->
+            <div class="kartu-menu">
+                <img src="Gambar/AlmondCroissant.jpg" alt="Almond Croissant" class="gambar-menu" />
+                <div class="info-menu">
+                    <div class="header-kartu">
+                        <!-- Dibungkus grup-nama agar harga tidak turun -->
+                        <div class="grup-nama">
+                            <span class="nama-menu">Almond Croissant</span>
+                            <span class="opsi-suhu">Freshly Baked</span>
+                        </div>
+                        <span class="harga-menu">Rp 28.000</span>
+                        <br class="bersihkan-float">
+                    </div>
+                    <hr class="garis-putus">
+                    <p class="deskripsi-menu">Croissant mentega renyah yang dipanggang segar setiap pagi dengan taburan almond.</p>
+                </div>
+            </div>
+            
+            <br class="bersihkan-float" />
+        </div>
+    </div>
+
+    <!-- Tambahan 2: Informasi Praktis Kafe -->
+    <div id="info-praktis" align="center">
+        <h3>Kunjungi Kafe Senja</h3>
+        <p>
+            <b>Jam Operasional:</b> Buka Setiap Hari (08.00 - 22.00 WIB)<br><br>
+            <b>Lokasi Kami:</b><br>
+            Jl. Mencari Cinta Sejati No. 99,<br>
+            Pontianak Kota, Kalimantan Barat 78123
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="kaki-web">
+        <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
+    </div>
+
+</body>
+</html>
