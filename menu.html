@@ -3,6 +3,7 @@
 <head>
     <title>Buku Menu | Senja Coffee</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
 
@@ -275,5 +276,24 @@
         <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
     </div>
 
+    <!-- SCRIPT ACCORDION MENU & TOMBOL DINAMIS -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 1. Secara otomatis menyisipkan tombol "Pesan Sekarang" di akhir setiap deskripsi
+            $('.deskripsi-menu').append('<br><br><a href="pesan.html" style="background-color: #D4AF37; color: #2D231E; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 10pt; display: inline-block;">Pesan Sekarang &rarr;</a>');
+
+            // 2. Sembunyikan semua deskripsi saat halaman pertama kali dibuka
+            $('.deskripsi-menu').hide();
+
+            // 3. Efek interaktif saat baris menu diklik
+            $('.baris-item').click(function(){
+                // Menutup deskripsi lain yang sedang terbuka (opsional, agar rapi)
+                $('.deskripsi-menu').not($(this).find('.deskripsi-menu')).slideUp(300);
+                
+                // Membuka (slide down) deskripsi dan tombol pada menu yang baru saja diklik
+                $(this).find('.deskripsi-menu').slideToggle(300);
+            });
+        });
+    </script>
 </body>
 </html>
