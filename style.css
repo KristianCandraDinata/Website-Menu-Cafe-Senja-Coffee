@@ -264,8 +264,8 @@ body {
     color: #5D4037;
     line-height: 1.6;
     margin: 0;
-    /* Meninggikan kotak dari 85px menjadi 125px untuk menampung teks panjang */
-    height: 125px; 
+    /* Naikkan dari 125px menjadi 170px agar muat untuk deskripsi yang sangat panjang */
+    height: 150px; 
 }
 
 /* === FOOTER === */
