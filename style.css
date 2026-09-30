@@ -194,7 +194,8 @@ body {
 }
 
 .info-menu {
-    padding: 25px 25px; /* KUNCI ESTETIKA: Memberikan ruang napas yang lega untuk teks */
+    /* Menambah padding bawah dari 25px menjadi 35px agar lebih lega */
+    padding: 25px 25px 35px 25px; 
 }
 
 #info-praktis {
@@ -217,52 +218,54 @@ body {
     margin-top: 0;
 }
 
-/* Memecah Nama dan Harga ke Kiri dan Kanan */
+/* Memecah Nama dan Harga secara vertikal agar tahan banting di layar sempit */
 .grup-nama {
-    float: left;
+    /* Hapus float: left; agar teks tidak memaksakan diri ke samping */
     text-align: left;
 }
 
 .nama-menu {
-    display: block; /* Memaksa teks ini mengambil 1 baris penuh agar opsi suhu turun ke bawah */
+    display: block; 
     font-family: 'Times New Roman', Times, serif;
     font-size: 15pt;
     font-weight: bold;
     color: #2D231E;
 }
 
-/* Desain estetik untuk teks Hot/Ice */
 .opsi-suhu {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 9pt;
-    color: #8D6E63; /* Warna cokelat pudar agar tidak menyaingi nama menu */
+    color: #8D6E63; 
     font-style: italic;
-    margin-top: 4px; /* Memberi sedikit jarak dari nama menu di atasnya */
+    margin-top: 4px; 
 }
 
 .harga-menu {
-    float: right;
+    /* Hapus float: right; dan ubah menjadi block agar selalu ada di bawah nama */
+    display: block;
     font-size: 14pt;
     font-weight: bold;
-    color: #D4AF37; /* Warna emas */
+    color: #D4AF37; 
+    margin-top: 10px; /* Jarak antara nama menu dan harga */
 }
 
 /* Garis Putus-putus */
 .garis-putus {
-    clear: both; /* KUNCI: Mencegah garis menabrak teks nama dan harga di atasnya */
+    clear: both; 
     border: 0;
-    border-top: 2px dotted #D7CCC8; /* Dotted memberi efek titik-titik yang lebih rapi */
+    border-top: 2px dotted #D7CCC8; 
     margin: 15px 0;
 }
 
 .deskripsi-menu {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif; /* Font modern yang membulat dan rapi */
-    font-size: 10.5pt; /* Ukuran sedikit dikecilkan agar terlihat presisi */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif; 
+    font-size: 10.5pt; 
     color: #5D4037;
     line-height: 1.6;
     margin: 0;
-    height: 75px; 
+    /* Meninggikan kotak dari 85px menjadi 125px untuk menampung teks panjang */
+    height: 125px; 
 }
 
 /* === FOOTER === */
