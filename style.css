@@ -264,8 +264,7 @@ body {
     color: #5D4037;
     line-height: 1.6;
     margin: 0;
-    /* Naikkan dari 125px menjadi 170px agar muat untuk deskripsi yang sangat panjang */
-    height: 150px; 
+    height: 125px; 
 }
 
 /* === FOOTER === */
