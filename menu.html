@@ -3,11 +3,11 @@
 <head>
     <title>Buku Menu | Senja Coffee</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- Memanggil Library jQuery Offline -->
     <script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
-
-    <!-- NAVIGASI & LOGO -->
+    <!--Navigasi Menu -->
     <div id="menu-navigasi">
         <h2 class="teks-logo">SENJA COFFEE</h2>
         <ul>
@@ -28,7 +28,7 @@
         <br class="bersihkan-float">
     </div>
 
-    <!-- BAGIAN HERO -->
+    <!-- Hero Section -->
     <div id="hero-wrapper">
         <div id="hero-kotak-teks">
             <h1 align="center">Menu</h1>
@@ -39,10 +39,10 @@
         </div>
     </div>
 
-    <!-- KONTEN UTAMA: DAFTAR MENU -->
+    <!-- Konten Utama -->
     <div id="konten-utama">
 
-        <!-- Daftar Isi Mini -->
+        <!-- Fitur Internal Link untuk Lompat ke Bagian Halaman Tertentu) -->
         <div align="center" style="margin-bottom: 40px;">
             <a href="#kopi" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Signature Coffee</a>
             <a href="#classic" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Classic Espresso</a>
@@ -51,7 +51,8 @@
             <a href="#makanan" class="tombol-cta" style="margin: 5px 10px; padding: 8px 20px; font-size: 10pt;">Pastry & Makanan</a>
         </div>
         
-        <!-- KATEGORI 1: SIGNATURE COFFEE -->
+        <!-- Kategori Menu -->
+         <!-- Kategori Signature Coffee -->
         <div class="kategori-box" id="kopi">
             <h2 align="center" class="sub-judul">Signature Coffee</h2>
             <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
@@ -74,7 +75,7 @@
             </table>
         </div>
 
-         <!-- KATEGORI 2: Classic Espresso -->
+         <!-- Kategori Classic Espresso -->
         <div class="kategori-box" id="classic">
             <h2 align="center" class="sub-judul">Classic Espresso</h2>
             <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
@@ -113,7 +114,7 @@
             </table>
         </div>
 
-        <!-- KATEGORI 3: Milk Based -->
+        <!-- Kategori Milk Based-->
         <div class="kategori-box" id="milk">
             <h2 align="center" class="sub-judul">Milk Based</h2>
             <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
@@ -160,7 +161,7 @@
             </table>
         </div>
 
-        <!-- KATEGORI 4: MINUMAN SEGAR -->
+        <!-- Kategori Minuman Segar -->
         <div class="kategori-box" id="nonkopi">
             <h2 align="center" class="sub-judul">Minuman Segar</h2>
             <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
@@ -207,7 +208,7 @@
             </table>
         </div>
 
-        <!-- KATEGORI 4: PASTRY & MAKANAN -->
+        <!-- Kategori Pastry & Makanan -->
         <div class="kategori-box" id="makanan">
             <h2 align="center" class="sub-judul">Pastry & Makanan</h2>
             <table class="tabel-menu" width="100%" cellspacing="0" cellpadding="20">
@@ -276,21 +277,18 @@
         <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
     </div>
 
-    <!-- SCRIPT ACCORDION MENU & TOMBOL DINAMIS -->
+    <!-- Interaksi jQuery -->
     <script type="text/javascript">
         $(document).ready(function(){
-            // 1. Secara otomatis menyisipkan tombol "Pesan Sekarang" di akhir setiap deskripsi
+            // Menyisipkan tombol Pesan Sekarang ke semua deskripsi
             $('.deskripsi-menu').append('<br><br><a href="pesan.html" style="background-color: #D4AF37; color: #2D231E; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 10pt; display: inline-block;">Pesan Sekarang &rarr;</a>');
-
-            // 2. Sembunyikan semua deskripsi saat halaman pertama kali dibuka
+            
+            // Menyembunyikan deskripsi di awal agar tampilan ringkas
             $('.deskripsi-menu').hide();
-
-            // 3. Efek interaktif saat baris menu diklik
+            
+            // Animasi memunculkan deskripsi (slide down) saat baris menu diklik
             $('.baris-item').click(function(){
-                // Menutup deskripsi lain yang sedang terbuka (opsional, agar rapi)
                 $('.deskripsi-menu').not($(this).find('.deskripsi-menu')).slideUp(300);
-                
-                // Membuka (slide down) deskripsi dan tombol pada menu yang baru saja diklik
                 $(this).find('.deskripsi-menu').slideToggle(300);
             });
         });

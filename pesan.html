@@ -2,12 +2,10 @@
 <head>
     <title>Reservasi Meja | Senja Coffee</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <!-- Memanggil file jQuery (Pastikan file jquery.js sudah ada di foldermu) -->
     <script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
-
-    <!-- NAVIGASI & LOGO -->
+    <!-- Navigasi Menu -->
     <div id="menu-navigasi">
         <h2 class="teks-logo">SENJA COFFEE</h2>
         <ul>
@@ -29,7 +27,6 @@
         <br class="bersihkan-float">
     </div>
 
-    <!-- HEADER HALAMAN RESERVASI -->
     <div id="hero-wrapper">
         <div id="hero-kotak-teks">
             <h1 align="center">Reservasi Meja</h1>
@@ -37,12 +34,12 @@
         </div>
     </div>
 
-    <!-- KONTEN UTAMA: FORMULIR -->
+    <!-- Konten Utama Form -->
     <div id="konten-utama">
         <div class="kategori-box">
             <h2 align="center" class="sub-judul">Formulir Pemesanan</h2>
-
-            <!-- Implementasi jQuery Toggle untuk Syarat & Ketentuan -->
+            
+            <!-- Tombol Toggle jQuery untuk Syarat & Ketentuan -->
             <div align="center">
                 <button id="tombol-syarat" class="tombol-cta" style="margin-top: 0; margin-bottom: 20px;">Baca Syarat Reservasi</button>
             </div>
@@ -55,12 +52,9 @@
                 </p>
             </div>
 
-            <!-- Form Pemesanan dengan Validasi JavaScript -->
-            <!-- Form Pemesanan dengan Validasi JavaScript -->
+            <!-- Form HTML dengan Event onSubmit untuk Validasi JS -->
             <form action="#" method="POST" onSubmit="return validasiForm()">
                 <table width="80%" align="center" cellpadding="10" cellspacing="0">
-                    
-                    <!-- 1. IDENTITAS DIRI -->
                     <tr>
                         <td width="30%"><b>Nama Lengkap</b></td>
                         <td width="70%"><input type="text" id="nama" name="nama" size="30" placeholder="Masukkan nama Anda"></td>
@@ -77,8 +71,6 @@
                         <td><b>Email (Opsional)</b></td>
                         <td><input type="text" id="email" name="email" size="30" placeholder="Masukkan email Anda"></td>
                     </tr>
-
-                    <!-- 2. DETAIL KEDATANGAN -->
                     <tr>
                         <td><b>Tanggal Kedatangan</b></td>
                         <td><input type="text" id="tanggal" name="tanggal" size="20" placeholder="Contoh: 15 Oktober 2026"></td>
@@ -86,7 +78,6 @@
                     <tr>
                         <td><b>Jam Kedatangan</b></td>
                         <td>
-                            <!-- Kita gunakan Drop Down agar pengunjung memilih waktu operasional kafe -->
                             <select id="waktu" name="waktu">
                                 <option value="">-- Pilih Waktu --</option>
                                 <option value="pagi">Pagi (08.00 - 11.00)</option>
@@ -107,8 +98,6 @@
                             </select>
                         </td>
                     </tr>
-
-                    <!-- 3. PREFERENSI LOKASI -->
                     <tr>
                         <td><b>Pilih Cabang</b></td>
                         <td>
@@ -127,8 +116,6 @@
                             <input type="radio" name="area" value="rooftop"> Rooftop (Senja View)
                         </td>
                     </tr>
-
-                    <!-- 4. KEBUTUHAN KHUSUS -->
                     <tr>
                         <td><b>Tujuan Acara (Opsional)</b></td>
                         <td>
@@ -163,8 +150,6 @@
                             <textarea id="catatan" name="catatan" rows="4" cols="40" wrap="physical" placeholder="Misal: Saya ingin meja di dekat jendela, tolong siapkan lilin kecil untuk kejutan ulang tahun..."></textarea>
                         </td>
                     </tr>
-
-                    <!-- 5. TOMBOL SUBMIT -->
                     <tr>
                         <td></td>
                         <td style="padding-top: 20px;">
@@ -172,19 +157,17 @@
                             <input type="reset" value="Kosongkan Form" class="tombol-cta" style="background: transparent; border: 2px solid #D4AF37; margin-top: 0;">
                         </td>
                     </tr>
-
                 </table>
             </form>
         </div>
     </div>
 
-    <!-- ==========================================
-         POP-UP BUKTI RESERVASI (CSS LAYER)
-         ========================================== -->
+    <!-- Pop Up Bukti Reservasi -->
     <div id="popup-reservasi" style="display: none; position: fixed; top: 15%; left: 50%; margin-left: -200px; width: 400px; background-color: #FFFFFF; border: 2px solid #D4AF37; border-radius: 12px; padding: 25px; box-shadow: 0px 10px 30px rgba(0,0,0,0.5); z-index: 999;">
         <h2 align="center" style="font-family: 'Times New Roman', Times, serif; color: #2D231E; margin-top: 0;">Bukti Reservasi</h2>
         <hr style="border: 0; border-top: 1px dashed #D7CCC8;">
         
+        <!-- Mencetak hasil inputan -->
         <p style="font-family: Arial, sans-serif; font-size: 11pt; color: #5D4037; line-height: 1.6;">
             <b>Nama Pemesan:</b> <span id="hasil-nama"></span><br>
             <b>No. Telepon:</b> <span id="hasil-notelp"></span><br>
@@ -204,30 +187,34 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <div id="kaki-web">
         <p>&copy; 2026 Senja Coffee Pontianak. Didesain oleh Kristian Candra Dinata.</p>
     </div>
 
-   <!-- SCRIPT JAVASCRIPT & JQUERY -->
+    <!-- Validasi Murni JS + Efek Animasi jQuery -->
     <script type="text/javascript">
         $(document).ready(function(){
-            // 1. Script jQuery untuk Toggle Syarat Reservasi
+            // Efek Toggle untuk syarat
             $('#tombol-syarat').click(function(event){
                 event.preventDefault(); 
                 $('#kotak-syarat').toggle(300); 
             });
 
-            // 2. Script jQuery untuk menutup Pop-up Bukti Reservasi
+            // Menutup pop-up dan reset form
             $('#tutup-popup').click(function(){
-                $('#popup-reservasi').hide(300); // Menyembunyikan popup
-                document.forms[0].reset(); // Mengosongkan form secara otomatis
+                $('#popup-reservasi').hide(300);
+                document.forms[0].reset();
+            });
+
+            // Membatalkan
+            $('#batal-popup').click(function(){
+                $('#popup-reservasi').hide(300); 
             });
         });
 
-        // 3. Script JavaScript murni untuk Validasi Form & Menampilkan Pop-up
+        // Logika Validasi dan Pemindahan Data ke DOM
         function validasiForm() {
-            // Menangkap nilai input
             var inputNama = document.getElementById("nama").value;
             var inputNotelp = document.getElementById("notelp").value;
             var inputTanggal = document.getElementById("tanggal").value;
@@ -235,31 +222,27 @@
             var inputCabang = document.getElementById("cabang").value;
             var inputCatatan = document.getElementById("catatan").value;
             
-            // Mengecek kolom wajib isi
+            // Cek kondisi field kosong
             if (inputNama == "" || inputNotelp == "" || inputTanggal == "" || inputWaktu == "" || inputCabang == "") {
                 alert("Peringatan: Nama Lengkap, Nomor Telepon, Tanggal, Jam Kedatangan, dan Cabang WAJIB diisi!");
                 return false; 
             } else {
-                // Memindahkan data dari form ke dalam tag span di Pop-up
+                // Manipulasi DOM untuk cetak bukti resi
                 document.getElementById("hasil-nama").innerHTML = inputNama;
                 document.getElementById("hasil-notelp").innerHTML = inputNotelp;
                 document.getElementById("hasil-tanggal").innerHTML = inputTanggal;
                 document.getElementById("hasil-waktu").innerHTML = inputWaktu;
                 document.getElementById("hasil-cabang").innerHTML = inputCabang;
                 
-                // Menangani catatan jika dibiarkan kosong
                 if(inputCatatan == "") {
                     document.getElementById("hasil-catatan").innerHTML = "-";
                 } else {
                     document.getElementById("hasil-catatan").innerHTML = inputCatatan;
                 }
 
-                // Memunculkan Pop-up layer dengan efek jQuery
+                // Memanggil jQuery untuk menampilkan pop-up animasi
                 $('#popup-reservasi').show(300);
-
-                // Mengembalikan nilai FALSE agar browser tidak me-refresh/pindah halaman. 
-                // Jika halaman ter-refresh, pop-up akan langsung menghilang sebelum sempat dibaca.
-                return false; 
+                return false; // Mencegah reload halaman
             }
         }
     </script>
